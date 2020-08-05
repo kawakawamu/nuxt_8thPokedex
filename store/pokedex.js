@@ -1,8 +1,7 @@
 import firebase from '~/plugins/firebase'
 import { firestoreAction } from 'vuexfire'
-import { firestore } from 'firebase'
 
-const db = firebase.sirestore()
+const db = firebase.firestore()
 const pokesRef = db.collection('pokedex')
 
 export const state = () => ({
