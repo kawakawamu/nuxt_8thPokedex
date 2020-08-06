@@ -1,12 +1,12 @@
 <template>
   <div>
-
+    <p>確認</p>
   </div>
 </template>
 <script>
   export default {
-    create: function() {
-      this.$store.dispatch('pokes/init')
+    created: function() {
+      this.$store.dispatch('pokedex/init')
     }
   }
 </script>
