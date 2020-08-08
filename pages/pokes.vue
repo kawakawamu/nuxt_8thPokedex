@@ -1,20 +1,28 @@
 <template>
   <div>
     <div>
-      <li v-for="(post, index in posts)" :key="index">
-        <a :href="'post.url'" target="_blank" rel="noopener noreferrer">{{ post.title }}</a>
+      <li v-for="(pokemon, index) in pokemons" :key="index">
+        <p>{{ pokemon.name }}</p>
+
       </li>
     </div>
   </div>
 </template>
 <script>
+  const axios = require('axios')
+  const url = 'https://raw.githubusercontent.com/dayu282/pokemon-data.json/master/jp/gen8-jp.json'
+
   export default {
-    async astncData({ $axios }) {
-      const url = "https://qiita.com/api/v2/items";
-      const response = await $sxios.$get(url);
-      return {
-        posts: response
-      };
-    }
+    asyncData({ params, error }) {
+      return axios
+        .get(url)
+        .then((responce) =>{
+            return { pokemons: responce.data }
+        })
+        .catch((e) =>{
+            error ({ pokemons: e.responce.status, message: 'error'})
+        })
+    },
+
   }
 </script>
