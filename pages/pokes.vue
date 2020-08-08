@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <li v-for="(pokemon, index) in pokemons" :key="index">
+      <li v-for="(pokemon, index) in pokemons" :key="index" class="c-liststyle">
         <p>{{ pokemon.name }}</p>
 
       </li>
@@ -26,3 +26,8 @@
 
   }
 </script>
+<style>
+ .c-liststyle{
+   list-style: none;
+ }
+</style>
