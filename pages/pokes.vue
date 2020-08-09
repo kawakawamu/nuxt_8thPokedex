@@ -3,7 +3,6 @@
     <div>
       <li v-for="(pokemon, index) in pokemons" :key="index" class="c-liststyle">
         <p>{{ pokemon.name }}</p>
-
       </li>
     </div>
   </div>
@@ -23,11 +22,29 @@
             error ({ pokemons: e.responce.status, message: 'error'})
         })
     },
+    data: function() {
+        let pokemons = {};
+        let sortOrders = {};
+        Object.keys(pokemons).forEach(function (key) {
+            sortOrders[key] = 1
+        });
 
+        return {
+            pokemons: pokemons,
+            tasks: [],
+            sortKey: '',
+            sortOrders: sortOrders
+        }
+    },
+    computed: {
+      pokemons() {
+        return this.index.slice().reverse();
+      }
+    }
   }
 </script>
 <style>
- .c-liststyle{
-   list-style: none;
- }
+  .c-liststyle {
+    list-style: none;
+  }
 </style>
