@@ -1,10 +1,13 @@
 <template>
   <div>
-    <div>
-      <li v-for="(pokemon, index) in reversePokemons" :key="index" class="c-liststyle">
-        <p>{{ pokemon.name }}</p>
-      </li>
-    </div>
+    <table>
+      <tr>
+        <th @click="sortBy('name')">ポケモン名</th>
+        <li v-for="(pokemon, index) in reversePokemons" :key="index" class="c-liststyle">
+          <p>{{ pokemon.name }}</p>
+        </li>
+      </tr>
+    </table>
   </div>
 </template>
 <script>
