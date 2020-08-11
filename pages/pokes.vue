@@ -27,6 +27,7 @@
     },
     data: function() {
         let pokemons = {};
+        let colmuns: ['name'];
         let sortOrders = {};
         Object.keys(pokemons).forEach(function (key) {
             sortOrders[key] = 1
@@ -42,6 +43,12 @@
     computed: {
       reversePokemons() {
         return this.pokemons.slice().reverse();
+      }
+    },
+    methods: {
+      sortBy: function(key) {
+        this.sortKey = key;
+        this.sortOrders[key] = this.sortOrders[key] * -1;
       }
     }
   }
