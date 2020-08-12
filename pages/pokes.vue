@@ -28,6 +28,7 @@
     data: function() {
         let pokemons = {};
         let colmuns: ['name'];
+        let sortKey: "";
         let sortOrders = {};
         Object.keys(pokemons).forEach(function (key) {
             sortOrders[key] = 1
