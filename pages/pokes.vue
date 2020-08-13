@@ -36,14 +36,16 @@
 
         return {
             pokemons: pokemons,
-            tasks: [],
+            colmuns: [],
             sortKey: '',
             sortOrders: sortOrders
         }
     },
     computed: {
-      reversePokemons() {
-        return this.pokemons.slice().reverse();
+      filterData: function() {
+        let data = this.pokemons;
+        let sortKey = this.sortKey;
+        let order = this.sortOrders[sortKey] || 1;
       }
     },
     methods: {
