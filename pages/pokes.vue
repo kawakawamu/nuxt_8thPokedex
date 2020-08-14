@@ -26,32 +26,36 @@
         })
     },
     data: function() {
-        let pokemons = {};
-        let colmuns: ['name'];
-        let sortKey: "";
-        let sortOrders = {};
-        Object.keys(pokemons).forEach(function (key) {
-            sortOrders[key] = 1
-        });
-
         return {
-            pokemons: pokemons,
-            colmuns: [],
-            sortKey: '',
-            sortOrders: sortOrders
+          sort: {
+            key: ''.
+            isAsc; false
+          }
         }
     },
     computed: {
-      filterData: function() {
-        let data = this.pokemons;
-        let sortKey = this.sortKey;
-        let order = this.sortOrders[sortKey] || 1;
+      sortedItems: function() {
+        const data = this.pokemons.slice();
+        if(!!this.sort.key) {
+          data.sort((a,b) {
+
+
+          a = a[this.sort.key]
+          b = b[this.sort.key]
+
+          return (a === b b ? 0 : a > b ? 1 : -1) * (this.sort.isAsc ? 1 : -1)
+          });
+        }
+        return　data;
       }
     },
     methods: {
-      sortBy: function(key) {
-        this.sortKey = key;
-        this.sortOrders[key] = this.sortOrders[key] * -1;
+      sortedClass (key) {
+        return this.sort.key === key ? `sorted ${this.sort.isAsc ? 'asc' : 'desc' }` : '';
+      },
+      sortBy (key) {
+        this.sort.isAsc = this.sort.key === key ? !this.sort.isAsc : false;
+        this.sort.key = key;
       }
     }
   }
