@@ -1,13 +1,23 @@
 <template>
-  <div>
-    <table>
-      <tr>
-        <th @click="sortBy('name')">ポケモン名</th>
-        <li v-for="(pokemon, index) in reversePokemons" :key="index" class="c-liststyle">
-          <p>{{ pokemon.name }}</p>
-        </li>
-      </tr>
-    </table>
+  <div class="l-container">
+    <div class="l-table">
+      <div class="l-table__header">
+        <div @click="sortBy('no')" class="l-table__1">No.</div>
+        <div @click="sortBy('name')" class="l-table__2">Pokemon</div>
+        <div @click="sortBy('base_stats')" class="l-table__3">Attack</div>
+        <div @click="sortBy('base_stats')" class="l-table__4">Defense</div>
+      </div>
+      <div class="l-table__container">
+        <transition-group name="flip-list">
+          <tr v-for="pokemon in sortedPokemons" :key="pokemon.name" class="c-liststyle">
+              <td class="l-table__1">{{ pokemon.no }}</td>
+              <td class="l-table__2">{{ pokemon.name }}</td>
+              <td class="l-table__3">{{ pokemon.base_stats[0] }}</td>
+              <td class="l-table__4">{{ pokemon.base_stats[1] }}</td>
+          </tr>
+        </transition-group>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -26,24 +36,22 @@
         })
     },
     data: function() {
-        return {
-          sort: {
-            key: ''.
-            isAsc; false
-          }
+      return {
+        sort: {
+          key: '',
+          isAsc: false
         }
+      }
     },
     computed: {
-      sortedItems: function() {
+      sortedPokemons: function() {
         const data = this.pokemons.slice();
         if(!!this.sort.key) {
-          data.sort((a,b) {
+          data.sort((a,b) => {
+            a = a[this.sort.key]
+            b = b[this.sort.key]
 
-
-          a = a[this.sort.key]
-          b = b[this.sort.key]
-
-          return (a === b b ? 0 : a > b ? 1 : -1) * (this.sort.isAsc ? 1 : -1)
+            return (a === b ? 0 : a > b ? 1 : -1) * (this.sort.isAsc ? 1 : -1)
           });
         }
         return　data;
@@ -61,7 +69,8 @@
   }
 </script>
 <style>
-  .c-liststyle {
-    list-style: none;
+  .flip-list-move {
+    transition: transform 1s;
   }
+
 </style>

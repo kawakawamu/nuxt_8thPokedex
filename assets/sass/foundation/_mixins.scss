@@ -1,0 +1,12 @@
+//スマホサイズ
+@mixin mq() {
+  @media #{map-get($breakpoints,sm)} {
+    @content;
+  }
+}
+//ベンダープレフィックス
+@mixin css3($property, $value) {
+   @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value;
+   }
+}

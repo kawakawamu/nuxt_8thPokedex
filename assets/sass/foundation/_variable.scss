@@ -1,0 +1,83 @@
+//header
+$headerHeight: 38px;
+
+//footer
+$footerHeight: 25px;
+
+//color
+$headerBgColor: #464c96;
+$headerListColor: #f4f3f3;
+$headerspListColor : #942525;
+$toppageBgColor: #9DDCDC;
+$footerBgColor: #dce4e4;
+$btnBaseColor: #43ded0;
+$btnHoverColor: #3ddef4;
+$atagFontColor: #464c96;
+$noCheckBgColor : #e7eaeb;
+$CheckBgColor : #fd166f;
+$RnkingTitleColor : #1628fd;
+$noCheckColor : #cbcaca;
+$loginborderColor : #e6e6e6;
+$boxunderColor : #3be5ae;
+$Whitecoloer: #fff;
+$spspancolor: #e8e8e8;
+$loginfontColor: #51505f;
+$alartSuccessColor : #16d3fd;
+$toppageFistBgColor : rgba(231, 236, 236, 0.4);
+
+$Blackcolor: #333;
+$IndexColor: #737272;
+$Selectarrow : #fd166f;
+$ResultColor : #fd166f;
+$TwitterColor: #00acee;
+$MakerWordColor: #39aba0;
+$MakeCardColor: #fdfbf2;
+$Selectfontcolor: #447974;
+$leftColor: #71cec5;
+$rightColor: #ffc4c4;
+$goTopColor: #c2e4e1;
+$btnFontColor: #045473;
+
+//サイト幅
+$site-width: 980px;
+
+//文字間隔
+$letter-spacing: 2px;
+
+//マップ型変数
+$breakpoints: (
+  'sm': 'screen and (max-width: 476px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+//文字サイズ
+$font-size_8px: 0.5rem; //8px
+$font-size_11px: 0.7rem; //11.2px
+$font-size_14px: 0.9rem; //14.4px
+$font-size_16px: 1.0rem; //16px
+$font-size_18px: 1.2rem; //19.2px
+$font-size_22px: 1.4rem; //22.4px
+$font-size_24px: 1.5rem; //24px
+$font-size_25px: 1.6rem; //25.6px
+$font-size_28px: 1.8rem; //28.8px
+$font-size_38px: 2.4rem; //38.4px
+
+//余白
+$space_s: 0.5rem; //8px
+$space_ss: 0.7rem; //11.2px
+$space_xs: 0.8rem; //12.8px
+$space_xxs: 0.9rem; //14.4px
+$space_m: 1.0rem; //16px
+$space_xm: 1.1rem; //17.6px
+$space_xxm: 1.2rem; //19.2px
+$space_l: 1.5rem; //24px
+$space_xl: 2.0rem;
+$space_2l: 2.5rem;
+$space_2xl: 2.6rem;
+$space_3l: 3.0rem;
+$space_4l: 4.0rem;
+$space_5l: 5.0rem;
+$space_10l: 10.0rem;
+$space_section: 15vh;
