@@ -1,20 +1,5 @@
-# hello
+# 8thPokedex
 
-## Build Setup
+<img width="1229" alt="top" src="https://user-images.githubusercontent.com/56011845/90330482-ede70080-dfe7-11ea-963c-162e9dea9e8d.png">
 
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+<h3 style="align:center;">https://nuxt-pokedex.firebaseapp.com/</h3>
