@@ -2,22 +2,36 @@
   &-table {
     width: 80%;
     margin: 20px auto;
+    @include mq() {
+      width: 120%;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
     &__header, &__container {
-      width: 100%;;
+      width: 100%;
     }
     &__1, &__2, &__3 {
       display: inline-block;
       padding: $space_m;
-
     }
     &__1 {
       width: 8%;
+      @include mq() {
+        width: 15%;
+      }
     }
     &__2 {
       width: 15%;
+      @include mq() {
+        width: 30%;
+      }
     }
     &__3 {
       width: 12%;
+      @include mq() {
+        width: 18%;
+      }
     }
   }
 }

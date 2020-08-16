@@ -6,6 +6,10 @@
     &__serch input {
       width: 15%;
       padding: 2px $space_s 0 2px;
+      @include mq() {
+        width: 54%;
+        padding: $space_ss;
+      }
     }
   }
 }
