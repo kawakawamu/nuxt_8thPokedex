@@ -1,0 +1,11 @@
+.c {
+  &-textbox {
+    &__serch {
+      text-align: center;
+    }
+    &__serch input {
+      width: 15%;
+      padding: 2px $space_s 0 2px;
+    }
+  }
+}
